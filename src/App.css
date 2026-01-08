@@ -1,0 +1,167 @@
+#root {
+  height: 100%;
+}
+
+.appRoot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBar {
+  height: 52px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: rgba(20, 20, 24, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.brandTitle {
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.3px;
+}
+
+.brandSubtitle {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.topBarStatus {
+  font-size: 12px;
+}
+
+.statusMuted {
+  opacity: 0.7;
+}
+
+.statusError {
+  color: #ff7b7b;
+}
+
+.appBody {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 320px;
+  flex: 0 0 auto;
+  padding: 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(16, 16, 18, 0.96);
+  overflow: auto;
+}
+
+.panel {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+}
+
+.panel + .panel {
+  margin-top: 12px;
+}
+
+.panelTitle {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.filePicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  user-select: none;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.filePicker:hover {
+  border-color: rgba(120, 190, 255, 0.65);
+  background: rgba(120, 190, 255, 0.12);
+}
+
+.filePickerInput {
+  display: none;
+}
+
+.filePickerLabel {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.helpText {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.helpText code {
+  font-size: 12px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.todoList {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.todoList li + li {
+  margin-top: 6px;
+}
+
+.viewportArea {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.viewportOverlay {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 13px;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+.threeViewport {
+  position: absolute;
+  inset: 0;
+}
+
+.threeViewport canvas {
+  display: block;
+}
